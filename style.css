@@ -1,195 +1,143 @@
 *{
-    margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      
-}
-
-html,body{
-    width: 100%;
-    height: 100%;
- 
-}
-#main{
-    width: 100%;
+    margin: 0;
+  }
+  
+  /* #5b7065, black */
+  body {
+    background: rgba(48, 64, 64, 1.0); 
+    background: -webkit-radial-gradient(center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+    background: -moz-radial-gradient(center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+    background: radial-gradient(ellipse at center, rgba(48, 64, 64, 1.0) 0%, rgba(0, 0, 0, 1.0) 100%);
+    font-family: 'Shadows Into Light', cursive;
     min-height: 100vh;
-
-}
-.top{
-    width: 100%;
-    min-height: 60vh;
-    background-image: url(uk.webp);
-    
-    background-size: cover;
-    background-position: center;
-}
-.top .overlay{
-    position: relative;
-    width: 100%;
-    min-height: inherit ;
-    background-color: rgba(0, 0, 0, 0.299);
-}
-.text{
+  }
+  
+  button {
+    height: fit-content;
+    cursor: pointer;
+    color: #04202c;
+    background-color: #c9d1c8;
+  }
+  
+  .app {
+    width: 600px;
+    margin: auto;
+    padding-top: 50px;
+    color: white;
+  }
+  
+  .input-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    width: 100%;
-    padding: 0 10vh;
-    color: azure;
-    bottom: 5%;
-}
-.text h1{
-    font-weight: 600;
-    font-size: 4vw ;
-}
-.text .image{
-    background-image: url(uttarakhand_tourism-01.jpg);
-    background-size: cover ;
-    background-position:bottom;
-    height: 200px;
-    width: 400px;
-}
-.rtext{
-    display: flex;
-    width: 25%;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-.rtext p{
-    font-size: 12px;
-}
-.bottom{
-    display: flex;
-    width: 100%;
-    min-height: 40vh;
-
-}
-.b1{
-    width: 30%;
-    min-height: inherit ;
-    background-image: url(mussourie.jpg);
-    background-size: cover;
-    background-position:center ;
-
-}
-.b1 h1{
-    text-align: center;
-    padding: 30px;
-}
-.b1 p{
-    color: rgba(0, 0, 0, 0.593);
-    text-align: center;
-    padding: 20px;
-}
-.b2{
-    width: 30%;
-    min-height: inherit ;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0px 0px 10px 0px;
+  }
+  
+  .to-do-input input {
+    width: 250px;
+    font-family: inherit;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    outline: none;
+  }
+  
+  .to-do-input button {
+    color: #5b7065;
+    font-family: inherit;
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .to-do-list {
     display: flex;
     flex-direction: column;
-
-}
-.b2 .up{
+    gap: 15px;
+  }
+  
+  .to-do-list i {
+    color: #c9d1c8;
+    cursor: pointer;
+  }
+  
+  .to-do-list .fa-pen-to-square {
+    color: #5b7065;
+  }
+  
+  .to-do-list button {
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  }
+  
+  .input-controller {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .input-controller textarea {
     width: 100%;
-    min-height: 20vh;
-    background-image: url(132215717Nainital_Lake_Main.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.b2 .up h1{
-    text-align: center;
-    padding: 30px;
-}
-.b2 .up p{
-    color: azure;
-    text-align: center;
-    padding: 15px;
-}
-.b2 .down{
-    width: 100%;
-    min-height: 20vh;
-    background-image: url(first-snowfall.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.b2 .down .overlay{
-    position: relative;
-    width: 100%;
-    min-height: 20vh;
-    background-color: rgba(240, 255, 255, 0.24);
-}
-.b3{
-    width: 50%;
-    min-height: inherit ;
-    background-image: url(traditional-dress-of-uttarakhand-1024x684.jpg.crdownload);
-    background-size: cover;
-    background-position: center;
-
-}
-.b3 .overlay{
-    justify-content: right;
-    position: relative;
-    margin-left: 50%;
-    width: 50%;
-    height: 100%;
-    padding: 4vw 3vh;
-}
-.b3 .overlay p{
-    padding:1.2vh;
-}
-@media(max-width:700px){
-    .rtext{
-        flex-direction: column;
+    outline: none;
+    border: none;
+    resize: none;
+    line-height: 1.4;
+    color: white;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-family: inherit;
+    transition: all 0.30s ease-in-out;
+  }
+  
+  textarea:focus {
+    box-shadow: 0 0 5px white;
+  }
+  
+  .edit-controller {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .update-controller {
+    display: none;
+  }
+  
+  @media(max-width: 768px) {
+    .app {
+      width: 95%;
+      text-align: center;
     }
-    .b3 .overlay{
-        width: 100%;
-        margin-left: initial;
+  
+    .input-header {
+      flex-direction: column;
+      padding-bottom: 20px;
     }
-}
-@media(max-width:500px){
-    .text{
-        flex-direction: column;
-        align-items: flex-start;
+  
+    .to-do-input {
+      display: flex;
     }
-    .text h1{
-        font-size: 5vh;
+  
+    .to-do-input input {
+      width: 300px;
     }
-    .text .image{
-        height: 200px;
-        width: 140px;
-        margin-top: 200px;
-    }
-    .rtext{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .rtext p{
-        margin-top: 10px;
-    }
-    .icons{
-        margin-top: 10px;
-    }
-    .bottom{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .b1{
-        width: 100%;
-        min-height: 30vh;
-
-    }
-    .b2{
-        width: 100%;
-        
-    }
-    .b2 up{
-        min-height: 30vh;
-    }
-    .b3{
-        width: 100%;
-        min-height: 30vh;
-        background-position: left;
-        
-    }
-}
+  
+  }
